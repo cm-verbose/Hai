@@ -1,6 +1,5 @@
 bits 16
 org 0x7C00
-
 mov si, 0
 
 main_loop:
@@ -8,7 +7,7 @@ main_loop:
   mov al, [message + si]
   int 0x10
 
-  add si, 1
+  inc si
   cmp byte [message + si], 0
   jne main_loop
 
